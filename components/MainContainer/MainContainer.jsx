@@ -1,20 +1,23 @@
 import { ProgressIndicator } from '../ProgressIndicator/ProgressIndicator';
 import { Box } from '../Box/Box';
+import { StyledMainContainer } from './MainContainer.styled';
+import img from '../../images/tileable-doodle.png';
 
 export const MainContainer = ({ children }) => {
+  console.log('img', img);
   return (
-    <Box
-      display="flex"
-      flexDirection="column"
-      alignItems="center"
-      width={568}
-      height="100%"
-      bg="#0E3452"
-      pt={200}
-    >
+    <StyledMainContainer>
       <ProgressIndicator />
 
-      <div> {children}</div>
-    </Box>
+      <Box
+        display="flex"
+        alignItems="center"
+        minHeight="100%"
+        flexGrow={2}
+        backgroundImage={`url("${img.src}")`}
+      >
+        {children}
+      </Box>
+    </StyledMainContainer>
   );
 };

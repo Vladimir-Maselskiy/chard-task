@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
-import { StyledMainContainer } from '../components/MainContainer/MainContainer.styled';
-import { ProgressIndicator } from '../components/ProgressIndicator/ProgressIndicator';
+import { MainContainer } from '../components/MainContainer/MainContainer';
+import { Wellcome } from '../components/Wellcome/Wellcome';
 
 export default function Home() {
   return (
@@ -16,29 +16,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <StyledMainContainer>
-          <ProgressIndicator />
-        </StyledMainContainer>
+      <main>
+        <MainContainer>
+          <Wellcome />
+        </MainContainer>
       </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              width={72}
-              height={16}
-            />
-          </span>
-        </a>
-      </footer>
     </div>
   );
 }

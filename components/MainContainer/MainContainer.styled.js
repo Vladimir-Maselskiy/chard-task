@@ -1,16 +1,8 @@
 import styled from 'styled-components';
-import { MainContainer } from './MainContainer.jsx';
+import img from '../../images/tileable-doodle.png';
 
-export const StyledMainContainer = styled(MainContainer)`
-  min-width: 568px;
-  height: 100vh;
-  background-color: #9696e5;
-  border: 1px solid red;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  margin-right: 20px;
-  font-size: 16px;
+export const StyledMainContainer = styled.div`
+  display: flex;
+  align-items: stretch;
+  width: 1440px;
 `;
