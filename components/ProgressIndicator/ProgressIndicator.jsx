@@ -9,10 +9,6 @@ import {
 } from './ProgressIndicator.styled';
 
 export const ProgressIndicator = ({ step }) => {
-  console.log(
-    'progressIndicatorItems',
-    progressIndicatorItems
-  );
   return (
     <Box
       display="flex"

@@ -1,44 +1,78 @@
-import { Formik, ErrorMessage, Form, Field } from 'formik';
-import { StyledForm } from './Wellcome.styled';
-// import { HiEyeOff, HiEye } from 'react-icons/hi';
-// import { ReactComponent as EmailIcon } from 'images/email.svg';
-// import { ReactComponent as PasswordIcon } from 'images/password.svg';
-// import { ReactComponent as UserIcon } from 'images/user.svg';
-// import { StyledNavLink } from './RegistrationForm.styled';
+import { Formik, ErrorMessage } from 'formik';
+import { Button } from '../Button/Button';
+import { LogoInModal } from '../LogoInModal/LogoInModal';
+import {
+  Input,
+  Label,
+  StyledForm,
+  StyledModal,
+  StyledTbEyeOff,
+} from './Wellcome.styled';
+import { ModalTitle } from '../ModalTitle/ModalTitle';
+import { ModalDescription } from '../ModalDescription/ModalDescription';
+import { HintMessage } from '../HintMessage/HintMessage';
+import { NextLink } from '../NextLink/NextLink';
+import { HintDescription } from '../HintDescription/HintDescription';
 
-export const Wellcome = ({ step }) => {
-  const handleSubmit = evt => {};
+export const Wellcome = ({ step = 1 }) => {
+  const handleSubmit = evt => {
+    console.log('evt.target', evt);
+  };
+  const initialValues = {
+    email: '',
+    password: '',
+    name: '',
+  };
 
   return (
-    <Formik
-      initialValues={''}
-      onSubmit={handleSubmit}
-      // validationSchema={schema.register}
-    >
-      <StyledForm>
-        <label htmlFor="firstName">First Name</label>
-        <Field
-          id="firstName"
-          name="firstName"
-          placeholder="Jane"
-        />
+    <StyledModal>
+      <LogoInModal />
+      <ModalTitle>Welcome to Chad</ModalTitle>
+      <ModalDescription>
+        Go live in 10 minutes! Our self-service widget
+        empowers your customers to manage orders and track
+        shipments 24/7 without driving you crazy.
+      </ModalDescription>
 
-        <label htmlFor="lastName">Last Name</label>
-        <Field
-          id="lastName"
-          name="lastName"
-          placeholder="Doe"
-        />
+      <Formik
+        initialValues={initialValues}
+        onSubmit={handleSubmit}
 
-        <label htmlFor="email">Email</label>
-        <Field
-          id="email"
-          name="email"
-          placeholder="jane@acme.com"
-          type="email"
-        />
-        <button type="submit">Submit</button>
-      </StyledForm>
-    </Formik>
+        // validationSchema={schema.register}
+      >
+        <StyledForm>
+          <Label htmlFor="email">Email</Label>
+          <Input
+            id="email"
+            name="email"
+            placeholder="megachad@trychad.com"
+            type="email"
+          />
+
+          <Label htmlFor="name">Your name</Label>
+          <Input
+            id="name"
+            name="name"
+            placeholder="Mega Chad"
+          />
+          <Label htmlFor="password">
+            Password
+            <Input
+              id="password"
+              name="password"
+              placeholder="Enter password"
+            />
+            <StyledTbEyeOff size={16} />
+          </Label>
+          <Button type="submit">Submit</Button>
+        </StyledForm>
+      </Formik>
+      <HintMessage>
+        <HintDescription>
+          Already have an account?
+        </HintDescription>
+        <NextLink> Login</NextLink>
+      </HintMessage>
+    </StyledModal>
   );
 };
