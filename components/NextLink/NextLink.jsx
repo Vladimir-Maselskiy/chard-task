@@ -1,9 +1,7 @@
 import { StyledNextLink } from './NextLink.styled';
 
-export const NextLink = ({ children }) => {
+export const NextLink = ({ path, children }) => {
   return (
-    <StyledNextLink href={'./login'}>
-      {children}
-    </StyledNextLink>
+    <StyledNextLink href={path}>{children}</StyledNextLink>
   );
 };

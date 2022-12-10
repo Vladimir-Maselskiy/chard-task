@@ -6,4 +6,5 @@ export const StyledModalDescription = styled.p`
   line-height: 1.5;
   letter-spacing: -1%;
   margin-top: 16px;
+  margin-bottom: 32px;
 `;
