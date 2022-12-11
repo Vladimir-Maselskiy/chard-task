@@ -3,7 +3,7 @@ import { Form, Field } from 'formik';
 import { TbEyeOff } from 'react-icons/tb';
 
 export const StyledModal = styled.div`
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   width: 480px;
   padding: 64px 40px;
