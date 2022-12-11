@@ -15,6 +15,7 @@ import { ModalDescription } from '../ModalDescription/ModalDescription';
 import { HintMessage } from '../HintMessage/HintMessage';
 import { NextLink } from '../NextLink/NextLink';
 import { HintDescription } from '../HintDescription/HintDescription';
+import { Box } from '../Box/Box';
 
 export const Wellcome = () => {
   const { setStep, setProgressCheck, setBigCheckIndex } =
