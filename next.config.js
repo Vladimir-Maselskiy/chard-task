@@ -6,8 +6,8 @@ const nextConfig = {
     loader: 'akamai',
     path: '',
   },
-  basePath: '/chard-task/tree/gh-pages',
-  assetPrefix: '/chard-task/tree/gh-pages',
+  basePath: '/chard-task',
+  assetPrefix: '/chard-task',
 };
 
 module.exports = nextConfig;
