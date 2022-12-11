@@ -14,7 +14,7 @@ export const StyledModal = styled.div`
 `;
 
 export const StyledForm = styled(Form)`
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   margin-top: 32px;
 `;

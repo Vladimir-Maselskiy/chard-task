@@ -1,4 +1,6 @@
-import { Formik, ErrorMessage } from 'formik';
+import { useAppContext } from '../../context/state';
+import { useEffect } from 'react';
+import { Formik } from 'formik';
 import { Button } from '../Button/Button';
 import { LogoInModal } from '../LogoInModal/LogoInModal';
 import {
@@ -13,17 +15,10 @@ import { ModalDescription } from '../ModalDescription/ModalDescription';
 import { HintMessage } from '../HintMessage/HintMessage';
 import { NextLink } from '../NextLink/NextLink';
 import { HintDescription } from '../HintDescription/HintDescription';
-import { useAppContext } from '../../context/state';
-import { useEffect } from 'react';
 
 export const Wellcome = () => {
-  const {
-    step,
-    setStep,
-    progressCheck,
-    setProgressCheck,
-    setBigCheckIndex,
-  } = useAppContext();
+  const { setStep, setProgressCheck, setBigCheckIndex } =
+    useAppContext();
 
   useEffect(() => {
     setStep(1), setProgressCheck(0);
@@ -87,8 +82,6 @@ export const Wellcome = () => {
           }
         }}
         onSubmit={handleSubmit}
-
-        // validationSchema={schema.register}
       >
         <StyledForm>
           <Label htmlFor="email">Email</Label>
