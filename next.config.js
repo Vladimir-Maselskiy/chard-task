@@ -4,6 +4,7 @@ const nextConfig = {
   swcMinify: true,
   images: {
     loader: 'akamai',
+    path: '',
   },
   basePath: '/chard-task',
   assetPrefix: '/chard-task',
