@@ -206,9 +206,9 @@ const StyledNextButton = (external_styled_components_default()).button`
 `;
 
 ;// CONCATENATED MODULE: ./images/icon_chevron-right.svg
-/* harmony default export */ const icon_chevron_right = ({"src":"/_next/static/media/icon_chevron-right.3943f8df.svg","height":17,"width":16});
+/* harmony default export */ const icon_chevron_right = ({"src":"/chard-task/tree/gh-pages/_next/static/media/icon_chevron-right.3943f8df.svg","height":17,"width":16});
 ;// CONCATENATED MODULE: ./images/icon_chevron-left.svg
-/* harmony default export */ const icon_chevron_left = ({"src":"/_next/static/media/icon_chevron-left.b8169eb8.svg","height":17,"width":16});
+/* harmony default export */ const icon_chevron_left = ({"src":"/chard-task/tree/gh-pages/_next/static/media/icon_chevron-left.b8169eb8.svg","height":17,"width":16});
 // EXTERNAL MODULE: ./node_modules/next/image.js
 var next_image = __webpack_require__(5675);
 var image_default = /*#__PURE__*/__webpack_require__.n(next_image);
@@ -309,7 +309,7 @@ const Styled5XDescription = (external_styled_components_default()).p`
 `;
 
 ;// CONCATENATED MODULE: ./images/progress-round-check.svg
-/* harmony default export */ const progress_round_check = ({"src":"/_next/static/media/progress-round-check.af2731e6.svg","height":32,"width":32});
+/* harmony default export */ const progress_round_check = ({"src":"/chard-task/tree/gh-pages/_next/static/media/progress-round-check.af2731e6.svg","height":32,"width":32});
 ;// CONCATENATED MODULE: ./components/StyledBigCheck/StyledBigCheck.styled.js
 
 const StyledChek = (external_styled_components_default()).div`
@@ -416,7 +416,7 @@ const ProgressIndicator = ()=>{
 };
 
 ;// CONCATENATED MODULE: ./images/tileable-doodle.png
-/* harmony default export */ const tileable_doodle = ({"src":"/_next/static/media/tileable-doodle.472f5a41.png","height":900,"width":872,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAIAQMAAAD+wSzIAAAABlBMVEX39/n39/j0mi0PAAAAFklEQVR42mO4y1DPUMzwjgFEGzO8BwAq0wU8M7BETwAAAABJRU5ErkJggg==","blurWidth":8,"blurHeight":8});
+/* harmony default export */ const tileable_doodle = ({"src":"/chard-task/tree/gh-pages/_next/static/media/tileable-doodle.472f5a41.png","height":900,"width":872,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAIAQMAAAD+wSzIAAAABlBMVEX39/n39/j0mi0PAAAAFklEQVR42mO4y1DPUMzwjgFEGzO8BwAq0wU8M7BETwAAAABJRU5ErkJggg==","blurWidth":8,"blurHeight":8});
 ;// CONCATENATED MODULE: ./components/MainContainer/MainContainer.styled.js
 
 

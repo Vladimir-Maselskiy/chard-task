@@ -9,7 +9,7 @@ exports.modules = {
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"src":"/_next/static/media/icon-check-vector.d8e03632.svg","height":9,"width":12});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"src":"/chard-task/tree/gh-pages/_next/static/media/icon-check-vector.d8e03632.svg","height":9,"width":12});
 
 /***/ }),
 
@@ -27,7 +27,7 @@ var jsx_runtime_ = __webpack_require__(997);
 // EXTERNAL MODULE: ./components/Box/Box.jsx
 var Box = __webpack_require__(2356);
 ;// CONCATENATED MODULE: ./images/chad-logo.svg
-/* harmony default export */ const chad_logo = ({"src":"/_next/static/media/chad-logo.0aa5f1b7.svg","height":32,"width":32});
+/* harmony default export */ const chad_logo = ({"src":"/chard-task/tree/gh-pages/_next/static/media/chad-logo.0aa5f1b7.svg","height":32,"width":32});
 // EXTERNAL MODULE: ./node_modules/next/image.js
 var next_image = __webpack_require__(5675);
 var image_default = /*#__PURE__*/__webpack_require__.n(next_image);

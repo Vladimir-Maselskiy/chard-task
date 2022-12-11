@@ -41,7 +41,7 @@ var ModalDescription = __webpack_require__(1831);
 // EXTERNAL MODULE: ./components/Box/Box.jsx
 var Box = __webpack_require__(2356);
 ;// CONCATENATED MODULE: ./images/check-mark.svg
-/* harmony default export */ const check_mark = ({"src":"/_next/static/media/check-mark.76138ca7.svg","height":160,"width":160});
+/* harmony default export */ const check_mark = ({"src":"/chard-task/tree/gh-pages/_next/static/media/check-mark.76138ca7.svg","height":160,"width":160});
 // EXTERNAL MODULE: ./node_modules/next/image.js
 var next_image = __webpack_require__(5675);
 var image_default = /*#__PURE__*/__webpack_require__.n(next_image);
