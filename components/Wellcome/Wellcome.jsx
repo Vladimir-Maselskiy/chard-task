@@ -52,7 +52,16 @@ export const Wellcome = () => {
   };
 
   return (
-    <StyledModal>
+    <Box
+      display="flex"
+      flexDirection="column"
+      width={480}
+      padding="64px 40px"
+      color="#134267"
+      backgroundColor="#ffffff"
+      borderRadius="8px"
+      boxShadow="0px 5px 20px rgba(108, 117, 139, 0.2)"
+    >
       <LogoInModal />
       <ModalTitle>Welcome to Chad</ModalTitle>
       <ModalDescription>
@@ -118,6 +127,6 @@ export const Wellcome = () => {
         </HintDescription>
         <NextLink path="./login"> Login</NextLink>
       </HintMessage>
-    </StyledModal>
+    </Box>
   );
 };
