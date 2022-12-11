@@ -10,5 +10,6 @@ export const StyledButton = styled.button`
   line-height: 21px;
   letter-spacing: -0.01em;
   color: #ffffff;
+  width: 100%;
   cursor: pointer;
 `;

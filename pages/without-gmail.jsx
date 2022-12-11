@@ -1,11 +1,11 @@
 import { MainContainer } from '../components/MainContainer/MainContainer';
-import { Shopify } from '../components/Shopify/Shopify';
+import { WithoutGmail } from '../components/WithoutGmail/WithoutGmail';
 
 export default function Home() {
   return (
     <main>
       <MainContainer>
-        <Shopify />
+        <WithoutGmail />
       </MainContainer>
     </main>
   );

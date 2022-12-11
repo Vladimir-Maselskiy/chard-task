@@ -1,6 +1,6 @@
 import { Button } from '../Button/Button';
 import { LogoInModal } from '../LogoInModal/LogoInModal';
-import { StyledModal } from './WithoutShopify.styled';
+import { StyledModal } from './WithoutGmail.styled';
 import { ModalTitle } from '../ModalTitle/ModalTitle';
 import { ModalDescription } from '../ModalDescription/ModalDescription';
 import { HintMessage } from '../HintMessage/HintMessage';
@@ -15,15 +15,15 @@ const options = [
   { value: 'hard', label: 'Hard' },
 ];
 
-export const WithoutShopify = () => {
+export const WithoutGmail = () => {
   return (
     <StyledModal>
       <LogoInModal />
-      <ModalTitle>Don’t use Shopify?</ModalTitle>
+      <ModalTitle>Don’t use Gmail?</ModalTitle>
       <ModalDescription>
-        Chad Beta is currently only available on Shopify.
-        We’ll send you an email when Chad becomes available
-        on your platform.
+        Chad Beta is currently only integrated with Gmail.
+        We’ll send you an email when Chad becomes compatible
+        with your support ticket platform.
       </ModalDescription>
 
       <Select
@@ -37,15 +37,15 @@ export const WithoutShopify = () => {
 
       <Button
         type="button"
-        route="./without-shopify/responce"
+        route="./without-gmail/responce"
       >
         Submit
       </Button>
       <HintMessage>
         <HintDescription>
-          Actually use Shopify?
+          Actually use Gmail?
         </HintDescription>
-        <NextLink path="./shopify">Connect</NextLink>
+        <NextLink path="./gmail">Connect</NextLink>
       </HintMessage>
     </StyledModal>
   );

@@ -1,16 +1,22 @@
 import { StyledProgressImage } from './ProgressCheckImage.styled';
 
-export const ProgressCheckImage = ({ check }) => {
+export const ProgressCheckImage = ({
+  progressChecked,
+  bgImg,
+}) => {
   return (
     <StyledProgressImage
-      check={check}
+      progressChecked={progressChecked}
+      bgImg={bgImg}
     ></StyledProgressImage>
   );
 };
-export const ProgressCheckConnectLine = ({ check }) => {
+export const ProgressCheckConnectLine = ({
+  progressChecked,
+}) => {
   return (
     <StyledProgressCheckConnectLine
-      check={check}
+      check={progressChecked}
     ></StyledProgressCheckConnectLine>
   );
 };

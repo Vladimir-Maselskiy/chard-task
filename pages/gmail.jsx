@@ -1,11 +1,11 @@
 import { MainContainer } from '../components/MainContainer/MainContainer';
-import { Shopify } from '../components/Shopify/Shopify';
+import { GmailConnect } from '../components/GmailConnect/GmailConnect';
 
 export default function Home() {
   return (
     <main>
       <MainContainer>
-        <Shopify />
+        <GmailConnect />
       </MainContainer>
     </main>
   );

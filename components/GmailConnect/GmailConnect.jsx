@@ -1,6 +1,6 @@
 import { Button } from '../Button/Button';
 import { LogoInModal } from '../LogoInModal/LogoInModal';
-import { StyledModal } from './Shopify.styled';
+import { StyledModal } from './GmailConnect.styled';
 import { ModalTitle } from '../ModalTitle/ModalTitle';
 import { ModalDescription } from '../ModalDescription/ModalDescription';
 import { HintMessage } from '../HintMessage/HintMessage';
@@ -8,22 +8,20 @@ import { NextLink } from '../NextLink/NextLink';
 import { ShopifyPreferenceInfo } from '../ShopifyPreferenceInfo/ShopifyPreferenceInfo';
 import { Box } from '../Box/Box';
 import IconCheck from '../../images/icon-check-vector.svg';
-import { useAmp } from 'next/amp';
 import { useAppContext } from '../../context/state';
 
-export const Shopify = () => {
-  const { step, setStep, progressCheck, setProgressCheck } =
-    useAppContext();
-  setStep(2), setProgressCheck(1);
-
+export const GmailConnect = () => {
+  const { setStep } = useAppContext();
+  setStep(3);
   return (
     <StyledModal>
       <LogoInModal />
-      <ModalTitle>Connect your Shopify store</ModalTitle>
+      <ModalTitle>
+        Connect your customer support email
+      </ModalTitle>
       <ModalDescription>
-        Installs the Chad widget in your Shopify store and
-        sets it up to display your customers’ order
-        information and self-serve options.
+        Allows Chad to send automated responses on your
+        behalf from your usual support mailbox
       </ModalDescription>
       <Box display="flex" alignItems="baseline">
         <img
@@ -34,9 +32,10 @@ export const Shopify = () => {
         />
 
         <ShopifyPreferenceInfo>
-          <h4>Track orders and shipping</h4>
+          <h4>Contextual responses</h4>
           <p>
-            Global coverage with 600+ couriers supported
+            Custom responses to any support situation from
+            “where’s my stuff?” to “I want a refund”
           </p>
         </ShopifyPreferenceInfo>
       </Box>
@@ -49,10 +48,10 @@ export const Shopify = () => {
         />
 
         <ShopifyPreferenceInfo>
-          <h4>Manage orders</h4>
+          <h4>Reply from anywhere</h4>
           <p>
-            Allow customers to track, return, exchange, or
-            report problems with their orders
+            Respond to your customers via email or Chad
+            chat—it’s all saved in the same thread
           </p>
         </ShopifyPreferenceInfo>
       </Box>
@@ -65,21 +64,20 @@ export const Shopify = () => {
         />
 
         <ShopifyPreferenceInfo>
-          <h4>Process returns and exchanges</h4>
+          <h4>Categorical inbox tags</h4>
           <p>
-            Automatically checks your store policy and
-            existing inventory before resolving or
-            escalating each request
+            Tags your emails by category so you know what to
+            expect before even opening an email
           </p>
         </ShopifyPreferenceInfo>
       </Box>
 
       <Button type="button" route="./shopify/successful">
-        Connect store
+        Connect Gmail account
       </Button>
       <HintMessage>
-        <NextLink path="./without-shopify">
-          I don’t use Shopify
+        <NextLink path="./without-gmail">
+          I don’t use Gmail
         </NextLink>
       </HintMessage>
     </StyledModal>

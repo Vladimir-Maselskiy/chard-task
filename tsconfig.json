@@ -22,7 +22,8 @@
     "**/*.ts",
     "**/*.tsx",
     "components/ProgressIndicator/ProgressIndicator.jsx",
-    "components/Box/Box.jsx"
+    "components/Box/Box.jsx",
+    "pages/_app.jsx"
   ],
   "exclude": ["node_modules"]
 }

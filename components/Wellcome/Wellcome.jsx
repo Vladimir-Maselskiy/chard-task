@@ -13,8 +13,13 @@ import { ModalDescription } from '../ModalDescription/ModalDescription';
 import { HintMessage } from '../HintMessage/HintMessage';
 import { NextLink } from '../NextLink/NextLink';
 import { HintDescription } from '../HintDescription/HintDescription';
+import { useAppContext } from '../../context/state';
 
-export const Wellcome = ({ step = 1 }) => {
+export const Wellcome = () => {
+  const { step, setStep, progressCheck, setProgressCheck } =
+    useAppContext();
+  setStep(1), setProgressCheck(0);
+
   const handleSubmit = evt => {
     console.log('evt.target', evt);
   };
@@ -64,14 +69,16 @@ export const Wellcome = ({ step = 1 }) => {
             />
             <StyledTbEyeOff size={16} />
           </Label>
-          <Button type="submit">Submit</Button>
+          <Button type="submit" route="./shopify" step={1}>
+            Submit
+          </Button>
         </StyledForm>
       </Formik>
       <HintMessage>
         <HintDescription>
           Already have an account?
         </HintDescription>
-        <NextLink> Login</NextLink>
+        <NextLink path="./login"> Login</NextLink>
       </HintMessage>
     </StyledModal>
   );
