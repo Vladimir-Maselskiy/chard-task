@@ -1,6 +1,5 @@
 import { StyledButton } from './Button.styled';
 import { useRouter } from 'next/router';
-import { useAppContext } from '../../context/state';
 
 export const Button = ({
   children,
