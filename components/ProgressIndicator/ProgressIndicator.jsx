@@ -13,12 +13,13 @@ import {
 } from './ProgressIndicator.styled';
 import ProgressRoundCheckIcon from '../../images/progress-round-check.svg';
 
+import { StyledBigCheck } from '../StyledBigCheck/StyledBigCheck';
 import { useAppContext } from '../../context/state';
+import Image from 'next/image';
 
 export const ProgressIndicator = () => {
-  const { step, setStep, progressCheck, setProgressCheck } =
+  const { step, progressCheck, bigCheckIndex } =
     useAppContext();
-  console.log('progressCheck', progressCheck);
   return (
     <Box
       display="flex"
@@ -34,6 +35,9 @@ export const ProgressIndicator = () => {
           (progressIndicatorItems, index) => {
             return (
               <StyledItem key={progressIndicatorItems}>
+                {bigCheckIndex === index && (
+                  <StyledBigCheck />
+                )}
                 {progressCheck > index && (
                   <Box
                     display="flex"
@@ -41,13 +45,17 @@ export const ProgressIndicator = () => {
                     position="absolute"
                     left={0}
                     top={0}
+                    zIndex={20}
                   >
-                    <img
+                    <Image
                       src={ProgressRoundCheckIcon.src}
                       alt="Check Mark Logo"
+                      width={32}
+                      height={32}
                     />
                   </Box>
                 )}
+
                 <ProgressCheckImage
                   progressChecked={index >= step}
                   bgImg={step > index + 1}

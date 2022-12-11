@@ -1,5 +1,6 @@
 import { Box } from '../Box/Box';
 import LogoIcon from '../../images/chad-logo.svg';
+import Image from 'next/image';
 
 export const LogoInModal = () => {
   return (
@@ -11,7 +12,12 @@ export const LogoInModal = () => {
       lineHeight={1.33}
     >
       <Box display="flex" alignItems="center">
-        <img src={LogoIcon.src} alt="Chad Logo" />
+        <Image
+          src={LogoIcon.src}
+          alt="Chad Logo"
+          width={28.42}
+          height={23.43}
+        />
       </Box>
       <h3>Chad</h3>
     </Box>

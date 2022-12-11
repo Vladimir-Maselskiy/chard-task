@@ -2,7 +2,11 @@ import { StyledButton } from './Button.styled';
 import { useRouter } from 'next/router';
 import { useAppContext } from '../../context/state';
 
-export const Button = ({ children, route }) => {
+export const Button = ({
+  children,
+  route,
+  isSubmitting,
+}) => {
   const router = useRouter();
 
   return (
@@ -10,6 +14,7 @@ export const Button = ({ children, route }) => {
       onClick={() => {
         router.push(`${route}`);
       }}
+      disabled={isSubmitting}
     >
       {children}
     </StyledButton>

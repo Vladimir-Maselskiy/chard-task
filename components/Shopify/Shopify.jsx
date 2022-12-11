@@ -10,11 +10,18 @@ import { Box } from '../Box/Box';
 import IconCheck from '../../images/icon-check-vector.svg';
 import { useAmp } from 'next/amp';
 import { useAppContext } from '../../context/state';
+import { useEffect } from 'react';
+import Image from 'next/image';
 
 export const Shopify = () => {
-  const { step, setStep, progressCheck, setProgressCheck } =
+  const { setStep, setBigCheckIndex, setProgressCheck } =
     useAppContext();
-  setStep(2), setProgressCheck(1);
+
+  useEffect(() => {
+    setStep(2);
+    setProgressCheck(1);
+    setBigCheckIndex(null);
+  }, [setStep, setProgressCheck, setBigCheckIndex]);
 
   return (
     <StyledModal>
@@ -26,7 +33,7 @@ export const Shopify = () => {
         information and self-serve options.
       </ModalDescription>
       <Box display="flex" alignItems="baseline">
-        <img
+        <Image
           src={IconCheck.src}
           alt="Icon Check"
           width={10.67}
@@ -41,7 +48,7 @@ export const Shopify = () => {
         </ShopifyPreferenceInfo>
       </Box>
       <Box display="flex" alignItems="baseline" mt={16}>
-        <img
+        <Image
           src={IconCheck.src}
           alt="Icon Check"
           width={10.67}
@@ -57,7 +64,7 @@ export const Shopify = () => {
         </ShopifyPreferenceInfo>
       </Box>
       <Box display="flex" alignItems="baseline" mt={16}>
-        <img
+        <Image
           src={IconCheck.src}
           alt="Icon Check"
           width={10.67}

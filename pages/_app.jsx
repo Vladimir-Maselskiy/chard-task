@@ -6,7 +6,6 @@ export default function App({ Component, pageProps }) {
   return (
     <AppWrapper>
       <Component {...pageProps} />
-      <h1>frewq</h1>
     </AppWrapper>
   );
 }

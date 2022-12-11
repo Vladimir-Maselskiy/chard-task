@@ -9,6 +9,7 @@ import img from '../../images/display-picture.png';
 import { Box } from '../Box/Box';
 import IconProgress from '../../images/progress.svg';
 import { useAppContext } from '../../context/state';
+import Image from 'next/image';
 
 export const Successful = () => {
   const { setProgressCheck } = useAppContext();
@@ -22,7 +23,7 @@ export const Successful = () => {
         backgroundImage={`url("${img.src}")`}
       >
         <Box position="absolute" top={0} right={0}>
-          <img
+          <Image
             src={IconProgress.src}
             alt="Icon Check"
             width={24}

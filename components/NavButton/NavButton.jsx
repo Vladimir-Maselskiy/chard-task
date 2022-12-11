@@ -6,6 +6,7 @@ import {
 
 import IconChevronRight from '../../images/icon_chevron-right.svg';
 import IconChevronLeft from '../../images/icon_chevron-left.svg';
+import Image from 'next/image';
 
 export const NavButton = ({ path, children }) => {
   return (
@@ -23,9 +24,11 @@ export const NavButton = ({ path, children }) => {
           top="8.5px"
           left="10px"
         >
-          <img
+          <Image
             src={IconChevronLeft.src}
             alt="Icon Chevron Right"
+            width={16}
+            height={16}
           />
         </Box>
         <StyledBackButton>Back</StyledBackButton>
@@ -38,9 +41,11 @@ export const NavButton = ({ path, children }) => {
           top="8.5px"
           right="10px"
         >
-          <img
+          <Image
             src={IconChevronRight.src}
             alt="Icon Chevron Left"
+            width={16}
+            height={16}
           />
         </Box>
         <StyledNextButton>Next</StyledNextButton>

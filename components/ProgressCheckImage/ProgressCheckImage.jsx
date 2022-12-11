@@ -1,4 +1,7 @@
-import { StyledProgressImage } from './ProgressCheckImage.styled';
+import {
+  StyledProgressImage,
+  StyledProgressCheckConnectLine,
+} from './ProgressCheckImage.styled';
 
 export const ProgressCheckImage = ({
   progressChecked,

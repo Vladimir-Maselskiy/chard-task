@@ -9,6 +9,7 @@ import { ShopifyPreferenceInfo } from '../ShopifyPreferenceInfo/ShopifyPreferenc
 import { Box } from '../Box/Box';
 import IconCheck from '../../images/icon-check-vector.svg';
 import { useAppContext } from '../../context/state';
+import Image from 'next/image';
 
 export const GmailConnect = () => {
   const { setStep } = useAppContext();
@@ -24,7 +25,7 @@ export const GmailConnect = () => {
         behalf from your usual support mailbox
       </ModalDescription>
       <Box display="flex" alignItems="baseline">
-        <img
+        <Image
           src={IconCheck.src}
           alt="Icon Check"
           width={10.67}
@@ -40,7 +41,7 @@ export const GmailConnect = () => {
         </ShopifyPreferenceInfo>
       </Box>
       <Box display="flex" alignItems="baseline" mt={16}>
-        <img
+        <Image
           src={IconCheck.src}
           alt="Icon Check"
           width={10.67}
@@ -56,7 +57,7 @@ export const GmailConnect = () => {
         </ShopifyPreferenceInfo>
       </Box>
       <Box display="flex" alignItems="baseline" mt={16}>
-        <img
+        <Image
           src={IconCheck.src}
           alt="Icon Check"
           width={10.67}

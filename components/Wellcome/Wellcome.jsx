@@ -14,15 +14,42 @@ import { HintMessage } from '../HintMessage/HintMessage';
 import { NextLink } from '../NextLink/NextLink';
 import { HintDescription } from '../HintDescription/HintDescription';
 import { useAppContext } from '../../context/state';
+import { useEffect } from 'react';
 
 export const Wellcome = () => {
-  const { step, setStep, progressCheck, setProgressCheck } =
-    useAppContext();
-  setStep(1), setProgressCheck(0);
+  const {
+    step,
+    setStep,
+    progressCheck,
+    setProgressCheck,
+    setBigCheckIndex,
+  } = useAppContext();
 
-  const handleSubmit = evt => {
-    console.log('evt.target', evt);
+  useEffect(() => {
+    setStep(1), setProgressCheck(0);
+  }, [setStep, setProgressCheck]);
+
+  const handleSubmit = async ({
+    name,
+    email,
+    password,
+  }) => {
+    const params = {
+      method: 'POST',
+      body: JSON.stringify({
+        name,
+        email,
+        password,
+        shop_token: null,
+        google_token: null,
+      }),
+    };
+    const data = await fetch(
+      'https://vast-basin-98801.herokuapp.com/register',
+      params
+    );
   };
+
   const initialValues = {
     email: '',
     password: '',
@@ -41,6 +68,24 @@ export const Wellcome = () => {
 
       <Formik
         initialValues={initialValues}
+        validate={values => {
+          const validEmail =
+            /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(
+              values.email
+            );
+
+          if (
+            validEmail &&
+            values.name &&
+            values.password
+          ) {
+            setBigCheckIndex(0);
+            setProgressCheck(1);
+          } else {
+            setBigCheckIndex(null);
+            setProgressCheck(0);
+          }
+        }}
         onSubmit={handleSubmit}
 
         // validationSchema={schema.register}
