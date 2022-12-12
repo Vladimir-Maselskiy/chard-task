@@ -14,7 +14,12 @@ import { useEffect } from 'react';
 import { Button } from '../Button/Button';
 
 export const ChadReady = () => {
-  const { user } = useAppContext();
+  const { user, setStep, setProgressCheck } =
+    useAppContext();
+
+  useEffect(() => {
+    setStep(4), setProgressCheck(4);
+  });
 
   return (
     <StyledModal>

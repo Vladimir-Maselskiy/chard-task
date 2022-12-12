@@ -15,7 +15,7 @@ import Image from 'next/image';
 import { useMedia } from 'react-use';
 
 export const Shopify = () => {
-  const isMobie = useMedia('(max-width: 767px)');
+  const isMobie = useMedia('(max-width: 1023px)');
 
   const { setStep, setBigCheckIndex, setProgressCheck } =
     useAppContext();
