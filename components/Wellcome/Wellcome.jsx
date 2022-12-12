@@ -19,11 +19,6 @@ import { Box } from '../Box/Box';
 import { useRouter } from 'next/router';
 
 export const Wellcome = () => {
-  const router = useRouter();
-  useEffect(() => {
-    router.push('./');
-  }, [router]);
-
   const { setStep, setProgressCheck, setBigCheckIndex } =
     useAppContext();
 
