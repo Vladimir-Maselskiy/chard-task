@@ -51,7 +51,7 @@ export const GoogleButton = ({
         display="flex"
         alignItems="center"
         position="absolute"
-        top="2px"
+        top="3px"
         left="2px"
       >
         <Image
