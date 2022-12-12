@@ -3,5 +3,15 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/api/auth/[...nextauth]": "pages/api/auth/[...nextauth].js",
-  "/gmail": "pages/gmail.js"
+  "/api/hello": "pages/api/hello.js",
+  "/chad-ready": "pages/chad-ready.html",
+  "/gmail": "pages/gmail.html",
+  "/": "pages/index.html",
+  "/shopify": "pages/shopify.html",
+  "/shopify/successful": "pages/shopify/successful.html",
+  "/without-gmail": "pages/without-gmail.html",
+  "/without-gmail/responce": "pages/without-gmail/responce.html",
+  "/without-shopify": "pages/without-shopify.html",
+  "/without-shopify/responce": "pages/without-shopify/responce.html",
+  "/404": "pages/404.html"
 }

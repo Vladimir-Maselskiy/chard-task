@@ -6,6 +6,7 @@ export function AppWrapper({ children }) {
   const [step, setStep] = useState(1);
   const [progressCheck, setProgressCheck] = useState(0);
   const [bigCheckIndex, setBigCheckIndex] = useState(null);
+  const [user, setUser] = useState(null);
   let sharedState = {
     step,
     setStep,
@@ -13,6 +14,8 @@ export function AppWrapper({ children }) {
     setProgressCheck,
     bigCheckIndex,
     setBigCheckIndex,
+    user,
+    setUser,
   };
 
   return (

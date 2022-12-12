@@ -4,6 +4,8 @@ import { signIn, signOut } from 'next-auth/react';
 import IconGoogle from '../../images/google-logo.svg';
 import { Box } from '../Box/Box';
 import Image from 'next/image';
+import { useEffect } from 'react';
+import { useAppContext } from '../../context/state';
 
 export const GoogleButton = ({
   children,
@@ -12,7 +14,17 @@ export const GoogleButton = ({
   session,
 }) => {
   const router = useRouter();
-  console.log('session', session);
+  const { step, progressCheck, user, setUser } =
+    useAppContext();
+
+  useEffect(() => {
+    if (session) {
+      setUser(session.user);
+      signOut();
+      router.push(`${route}`);
+    }
+  }, [session, setUser, signOut, route, router]);
+
   return (
     <Box position="relative" mt={32}>
       <StyledGoogleButton
@@ -20,6 +32,14 @@ export const GoogleButton = ({
           if (session) {
             signOut();
           } else {
+            localStorage.setItem(
+              'user',
+              JSON.stringify({
+                step,
+                progressCheck,
+                user,
+              })
+            );
             signIn();
           }
         }}

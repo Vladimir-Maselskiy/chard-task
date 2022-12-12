@@ -22,7 +22,7 @@ export const Wellcome = () => {
   const router = useRouter();
   useEffect(() => {
     router.push('./');
-  }, []);
+  }, [router]);
 
   const { setStep, setProgressCheck, setBigCheckIndex } =
     useAppContext();

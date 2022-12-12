@@ -77,7 +77,7 @@ export const GmailConnect = () => {
 
       <GoogleButton
         type="button"
-        route="./shopify/successful"
+        route="./chad-ready"
         session={session}
       >
         {!session
