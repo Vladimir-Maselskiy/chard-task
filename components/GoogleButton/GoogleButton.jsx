@@ -29,6 +29,10 @@ export const GoogleButton = ({
     <Box position="relative" mt={32}>
       <StyledGoogleButton
         onClick={() => {
+          router.push(`${route}`);
+          return;
+
+          //this code is working on localhost:3000, but git has error with google auth
           if (session) {
             signOut();
           } else {
@@ -52,7 +56,7 @@ export const GoogleButton = ({
         alignItems="center"
         position="absolute"
         top="3px"
-        left="2px"
+        left="3px"
       >
         <Image
           src={IconGoogle.src}

@@ -11,6 +11,12 @@ export const StyledModal = styled.div`
   background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0px 5px 20px rgba(108, 117, 139, 0.2);
+  @media screen and (max-width: 1023px) {
+    width: 540px;
+  }
+  @media screen and (max-width: 767px) {
+    width: 390px;
+  }
 `;
 
 export const StyledForm = styled(Form)`
@@ -20,7 +26,7 @@ export const StyledForm = styled(Form)`
 `;
 
 export const Input = styled(Field)`
-  width: 400px;
+  width: 100%;
   height: 45px;
   padding: 10px 10px 10px 17px;
   background: #f8f9fc;

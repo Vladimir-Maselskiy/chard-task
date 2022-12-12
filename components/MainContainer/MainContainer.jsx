@@ -2,9 +2,13 @@ import { ProgressIndicator } from '../ProgressIndicator/ProgressIndicator';
 import { Box } from '../Box/Box';
 import { StyledMainContainer } from './MainContainer.styled';
 import img from '../../images/tileable-doodle.png';
+import { useMedia } from 'react-use';
+
 import Head from 'next/head';
 
 export const MainContainer = ({ children }) => {
+  const isMobie = useMedia('(min-width: 1024px)');
+
   return (
     <StyledMainContainer>
       <Head>
@@ -15,7 +19,7 @@ export const MainContainer = ({ children }) => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <ProgressIndicator />
+      {isMobie && <ProgressIndicator />}
 
       <Box
         display="flex"

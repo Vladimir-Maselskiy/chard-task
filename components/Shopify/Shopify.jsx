@@ -5,15 +5,18 @@ import { ModalTitle } from '../ModalTitle/ModalTitle';
 import { ModalDescription } from '../ModalDescription/ModalDescription';
 import { HintMessage } from '../HintMessage/HintMessage';
 import { NextLink } from '../NextLink/NextLink';
+import { MobieProgressLine } from '../MobieProgressLine/MobieProgressLine';
 import { ShopifyPreferenceInfo } from '../ShopifyPreferenceInfo/ShopifyPreferenceInfo';
 import { Box } from '../Box/Box';
 import IconCheck from '../../images/icon-check-vector.svg';
-import { useAmp } from 'next/amp';
 import { useAppContext } from '../../context/state';
 import { useEffect } from 'react';
 import Image from 'next/image';
+import { useMedia } from 'react-use';
 
 export const Shopify = () => {
+  const isMobie = useMedia('(max-width: 767px)');
+
   const { setStep, setBigCheckIndex, setProgressCheck } =
     useAppContext();
 
@@ -26,6 +29,7 @@ export const Shopify = () => {
   return (
     <StyledModal>
       <LogoInModal />
+      {isMobie && <MobieProgressLine />}
       <ModalTitle>Connect your Shopify store</ModalTitle>
       <ModalDescription>
         Installs the Chad widget in your Shopify store and

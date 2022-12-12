@@ -3,6 +3,7 @@ import { LogoInModal } from '../LogoInModal/LogoInModal';
 import { StyledModal } from './GmailConnect.styled';
 import { ModalTitle } from '../ModalTitle/ModalTitle';
 import { ModalDescription } from '../ModalDescription/ModalDescription';
+import { MobieProgressLine } from '../MobieProgressLine/MobieProgressLine';
 import { HintMessage } from '../HintMessage/HintMessage';
 import { NextLink } from '../NextLink/NextLink';
 import { ShopifyPreferenceInfo } from '../ShopifyPreferenceInfo/ShopifyPreferenceInfo';
@@ -11,14 +12,17 @@ import IconCheck from '../../images/icon-check-vector.svg';
 import { useAppContext } from '../../context/state';
 import Image from 'next/image';
 import { useSession } from 'next-auth/react';
+import { useMedia } from 'react-use';
 
 export const GmailConnect = () => {
+  const isMobie = useMedia('(max-width: 1023px)');
   const { data: session } = useSession();
   const { setStep } = useAppContext();
   setStep(3);
   return (
     <StyledModal>
       <LogoInModal />
+      {isMobie && <MobieProgressLine />}
       <ModalTitle>
         Connect your customer support email
       </ModalTitle>

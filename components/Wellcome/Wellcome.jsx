@@ -11,14 +11,17 @@ import {
   StyledTbEyeOff,
 } from './Wellcome.styled';
 import { ModalTitle } from '../ModalTitle/ModalTitle';
+import { MobieProgressLine } from '../MobieProgressLine/MobieProgressLine';
 import { ModalDescription } from '../ModalDescription/ModalDescription';
 import { HintMessage } from '../HintMessage/HintMessage';
 import { NextLink } from '../NextLink/NextLink';
 import { HintDescription } from '../HintDescription/HintDescription';
 import { Box } from '../Box/Box';
-import { useRouter } from 'next/router';
+import { useMedia } from 'react-use';
 
 export const Wellcome = () => {
+  const isMobie = useMedia('(max-width: 1023px)');
+
   const { setStep, setProgressCheck, setBigCheckIndex } =
     useAppContext();
 
@@ -54,17 +57,9 @@ export const Wellcome = () => {
   };
 
   return (
-    <Box
-      display="flex"
-      flexDirection="column"
-      width={480}
-      padding="64px 40px"
-      color="#134267"
-      backgroundColor="#ffffff"
-      borderRadius="8px"
-      boxShadow="0px 5px 20px rgba(108, 117, 139, 0.2)"
-    >
+    <StyledModal>
       <LogoInModal />
+      {isMobie && <MobieProgressLine />}
       <ModalTitle>Welcome to Chad</ModalTitle>
       <ModalDescription>
         Go live in 10 minutes! Our self-service widget
@@ -129,6 +124,6 @@ export const Wellcome = () => {
         </HintDescription>
         <NextLink path="./login"> Login</NextLink>
       </HintMessage>
-    </Box>
+    </StyledModal>
   );
 };
