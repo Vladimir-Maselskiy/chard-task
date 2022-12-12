@@ -2,9 +2,7 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js",
   "/chad-ready": "pages/chad-ready.js",
-  "/shopify": "pages/shopify.js",
-  "/shopify/successful": "pages/shopify/successful.js",
-  "/gmail": "pages/gmail.js"
+  "/gmail": "pages/gmail.js",
+  "/": "pages/index.js"
 }

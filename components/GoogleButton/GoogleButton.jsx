@@ -23,7 +23,7 @@ export const GoogleButton = ({
       signOut();
       router.push(`${route}`);
     }
-  }, [session, setUser, signOut, route, router]);
+  }, [session, setUser, route, router]);
 
   return (
     <Box position="relative" mt={32}>

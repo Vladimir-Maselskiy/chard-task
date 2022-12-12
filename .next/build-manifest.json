@@ -39,16 +39,6 @@
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/gmail.js"
-    ],
-    "/shopify": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/shopify.js"
-    ],
-    "/shopify/successful": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/shopify/successful.js"
     ]
   },
   "ampFirstPages": []
