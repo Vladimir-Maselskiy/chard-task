@@ -1,4 +1,4 @@
-import { Button } from '../Button/Button';
+import { GoogleButton } from '../GoogleButton/GoogleButton';
 import { LogoInModal } from '../LogoInModal/LogoInModal';
 import { StyledModal } from './GmailConnect.styled';
 import { ModalTitle } from '../ModalTitle/ModalTitle';
@@ -10,8 +10,10 @@ import { Box } from '../Box/Box';
 import IconCheck from '../../images/icon-check-vector.svg';
 import { useAppContext } from '../../context/state';
 import Image from 'next/image';
+import { useSession } from 'next-auth/react';
 
 export const GmailConnect = () => {
+  const { data: session } = useSession();
   const { setStep } = useAppContext();
   setStep(3);
   return (
@@ -73,14 +75,23 @@ export const GmailConnect = () => {
         </ShopifyPreferenceInfo>
       </Box>
 
-      <Button type="button" route="./shopify/successful">
-        Connect Gmail account
-      </Button>
-      <HintMessage>
-        <NextLink path="./without-gmail">
-          I don’t use Gmail
-        </NextLink>
-      </HintMessage>
+      <GoogleButton
+        type="button"
+        route="./shopify/successful"
+        session={session}
+      >
+        {!session
+          ? 'Connect Gmail account'
+          : 'Logout Gmail account'}
+      </GoogleButton>
+
+      {!session && (
+        <HintMessage>
+          <NextLink path="./without-gmail">
+            I don’t use Gmail
+          </NextLink>
+        </HintMessage>
+      )}
     </StyledModal>
   );
 };
